@@ -7,3 +7,21 @@ node_modules
 .vercel
 .DS_Store
 yarn-error.log
+
+.env
+node_modules
+.env.*
+!.env.example
+dist
+
+/src/generated
+/src/app/generated
+
+prisma/migrations
+<<<<<<< HEAD
+=======
+.vercel
+.env*
+>>>>>>> f27f45b (the registration related bug fixed)
+
+/src/generated/prisma

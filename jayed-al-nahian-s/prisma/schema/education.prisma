@@ -1,0 +1,12 @@
+
+model Education {
+  id           String    @id @default(uuid())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String
+  institution  String    // e.g., "Global Institute of Science and Technology" [cite: 71]
+  degree       String    // e.g., "Diploma in Computer Science" [cite: 70]
+  duration     String    // e.g., "2023 - 2027" [cite: 71]
+  status       String   // e.g., "5th Semester" [cite: 71]
+  description  String   @db.Text
+  order        Int       @default(0)
+}

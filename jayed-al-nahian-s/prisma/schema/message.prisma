@@ -1,0 +1,11 @@
+model Message {
+  id        String   @id @default(uuid())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String
+  name      String
+  email     String
+  subject   String
+  message   String   @db.Text
+  isRead    Boolean  @default(false) // So you can manage them in your dashboard
+  createdAt DateTime @default(now())
+}

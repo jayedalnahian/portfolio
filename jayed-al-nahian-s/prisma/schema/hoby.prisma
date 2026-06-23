@@ -1,0 +1,8 @@
+model Hobby {
+  id          String  @id @default(uuid())
+  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  name        String // e.g., "Open-source collaboration", "Scouting" [cite: 104, 116]
+  description String?
+  icon        String?
+}

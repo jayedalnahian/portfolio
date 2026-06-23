@@ -1,0 +1,8 @@
+model Stat {
+  id    String @id @default(uuid())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String
+  label String // e.g., "Projects Completed", "Club Members" [cite: 103]
+  value String // e.g., "15+", "30+" [cite: 103]
+  icon  String // Lucide icon string token for the frontend
+}

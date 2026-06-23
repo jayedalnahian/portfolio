@@ -1,0 +1,12 @@
+
+
+model Skill {
+  id          String        @id @default(uuid())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String
+  name        String        // e.g., "Next.js", "TypeScript", "Go" [cite: 22, 26, 28]
+  category    SkillCategory
+  proficiency Int?          // Optional: 1-100 percentage for progress bars
+  icon        String?       // Devicon/Lucide icon identifier
+  order       Int           @default(0) // For custom ordering on your UI
+}

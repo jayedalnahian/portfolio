@@ -1,0 +1,19 @@
+enum ProjectType {
+  FRONTEND
+  BACKEND
+  FULLSTACK
+}
+
+enum SkillCategory {
+  FRONTEND
+  BACKEND 
+  DEVOPS
+  PROGRAMMING_LANGUAGE
+  SPOKEN_LANGUAGE
+  AI_TOOL // Extra category based on your profile [cite: 55]
+}
+
+enum UserStatus {
+    ACTIVE
+    BANNED
+}

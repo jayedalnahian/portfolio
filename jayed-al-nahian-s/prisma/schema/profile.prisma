@@ -1,0 +1,16 @@
+model Profile {
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String   @unique
+  name      String
+  title     String // e.g., "Full-Stack Developer" [cite: 4]
+  location  String // e.g., "Dinajpur, Bangladesh" [cite: 5]
+  email     String
+  phone     String?
+  resumeUrl String?
+  github    String?
+  linkedin  String?
+  bio       String   @db.Text
+  summary   String   @db.Text // Professional summary [cite: 12]
+  updatedAt DateTime @updatedAt
+}
